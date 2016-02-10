@@ -1,5 +1,5 @@
 FROM httpd:2.4
-MAINTAINER Alexis Tual
+MAINTAINER Scott Anderson
 
 # Compilation and installation of adaptor
 ENV buildDeps gcc make libc6-dev libpcre++-dev apache2-dev
@@ -55,9 +55,9 @@ RUN echo "===> clean up..."  && \
 ENV NEXT_ROOT /opt
 RUN  mkdir -p /woapps \
   && cd /woapps \
-  && curl -O https://jenkins.wocommunity.org/job/Wonder/lastSuccessfulBuild/artifact/Root/Roots/JavaMonitor.tar.gz  \
+  && curl -O https://jenkins.wocommunity.org/job/Wonder7/lastSuccessfulBuild/artifact/Root/Roots/JavaMonitor.tar.gz  \
   && tar xzf JavaMonitor.tar.gz && rm JavaMonitor.tar.gz  \
-  && curl -O https://jenkins.wocommunity.org/job/Wonder/lastSuccessfulBuild/artifact/Root/Roots/wotaskd.tar.gz  \
+  && curl -O https://jenkins.wocommunity.org/job/Wonder7/lastSuccessfulBuild/artifact/Root/Roots/wotaskd.tar.gz  \
   && tar xzf wotaskd.tar.gz && rm wotaskd.tar.gz  \
   && mkdir /var/log/webobjects
 
